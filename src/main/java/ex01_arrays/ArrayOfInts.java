@@ -31,7 +31,17 @@ public class ArrayOfInts {
     }
 
     public int sumOfXLargest(int[] arrayOfInts, int x) {
-        return 0;
+        if(arrayOfInts == null || arrayOfInts.length == 0) return 0;
+        if(x== 0) return 0;
+
+        int[] copy = Arrays.copyOf(arrayOfInts, arrayOfInts.length);
+        Arrays.sort(copy);
+
+        if (arrayOfInts.length < x)
+            return sumOfInts(copy);
+        else
+            return sumOfInts(Arrays.copyOfRange(copy, copy.length -x, copy.length));
+
     }
 
     public static void main(String[] args) {
