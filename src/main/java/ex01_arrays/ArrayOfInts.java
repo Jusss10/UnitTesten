@@ -11,6 +11,9 @@ public class ArrayOfInts {
         return sum;
     }
 
+    //Nieuwe test aanmaken
+    //cntrl + shift + t
+
     public int sumOf3SmallestInts(int[] arrayOfInts) {
         if (arrayOfInts == null) return 0;
         int[] copy = Arrays.copyOf(arrayOfInts, arrayOfInts.length);
